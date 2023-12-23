@@ -3,6 +3,8 @@ import { List } from "./List";
 import { Input } from "./Input";
 import { EmptyMessage } from "./EmptyMessage";
 
+localStorage.setItem("todos", JSON.stringify([]));
+
 export default function App() {
   const [list, setList] = useState(JSON.parse(localStorage.getItem("todos")));
   const [edit, setEdit] = useState(false);
